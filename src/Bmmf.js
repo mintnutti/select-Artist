@@ -20,7 +20,7 @@ const ContainerTable = styled.div`
   margin-right: auto;
   height: 300px;
   text-align:center ;
-  margin-bottom:40px ;
+  margin-bottom:20px ;
   margin-top:10px;
   position:relative ;
   overflow-x:scroll ;
@@ -161,10 +161,8 @@ justify-content:center ;
 margin-top:0px ;
 margin-left:auto ;
 margin-right:auto ;
-margin-bottom:30px ;
+margin-bottom:10px ;
 `
-
-
 
 const ModalArtist = styled.div` 
 position:absolute;
@@ -526,7 +524,6 @@ function Bmmf () {
         <DotColor bgColor={'#138086'}/>
         <TextStage>อโคจรผับ</TextStage>
         </DivStage>
-
     </FlexStage>
 
     <FlexDate>
