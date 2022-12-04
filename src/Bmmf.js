@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 const Container = styled.div`
-  width: 1200px;
+  width: 100%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
   text-align:center ;
   margin-bottom:80px ;
-  margin-top:80px;
+  margin-top:20px;
+  position:relative ;
+`
+
+const ContainerTable = styled.div`
+  width: 90%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  text-align:center ;
+  margin-bottom:80px ;
+  margin-top:20px;
   position:relative ;
   overflow-x:scroll ;
 `
@@ -23,6 +35,15 @@ cursor:pointer ;
 `
 
 const FlexData = styled.div` 
+width:1100px;
+display:flex;
+margin-top:0px ;
+margin-left:auto ;
+margin-right:auto ;
+margin-bottom:10px ;
+`
+
+const FlexDate = styled.div` 
 width:90%;
 display:flex;
 margin-top:0px ;
@@ -61,7 +82,8 @@ cursor:pointer ;
 const DateConcert= styled.div` 
 width:75px;
 height:30px;
-background-color:#252525 ;
+margin-right:10px ;
+background-color:${({bg})=>bg === false ? '#cecece':'#252525'}  ;
 border-radius:100px ;
 position:relative ;
 cursor:pointer ;
@@ -111,6 +133,7 @@ const TextStage = styled.div`
 font-size:0.8rem ;
 font-weight:300 ;
 padding-left:5px ;
+padding-top:2px ;
 text-transform: uppercase;
 `
 const DivStage = styled.div`
@@ -133,7 +156,7 @@ margin-bottom:30px ;
 
 const ModalArtist = styled.div` 
 position:absolute;
-width:350px;
+width:300px;
 height:250px;
 background-color:#fafafa;
 box-shadow: 0 3px 20px #00000002;
@@ -141,29 +164,29 @@ z-index:10 ;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-border-radius:40px ;
+border-radius:10px ;
 padding-left:10px;
 padding-right:10px ;
 `
 
 const X = styled.div` 
 position:absolute;
-width:40px;
-height:40px;
+width:30px;
+height:30px;
 background-color:#FFFFFF;
 border:3px solid #000000 ;
 z-index:11 ;
 top: -10px;
 right:-10px ;
 border-radius:100px ;
-font-size:1.6rem ;
+font-size:1.25rem ;
 cursor:pointer ;
 padding-top:5px ;
 padding-left:2px ;
 padding-right:2px ;
 `
 const TextName = styled.div` 
-font-size:1.5rem ;
+font-size:1.05rem ;
 color:${({bgColor})=>bgColor} ;
 margin-top:40px;
 margin-bottom:10px ;
@@ -210,6 +233,7 @@ function Bmmf () {
 
     const [showModal,setShowModal]= useState(false)
     const [dataSelect,setDataSelect]= useState([])
+    const [selectDate,setSelectDate]= useState(1)
 
     const defaultTime =[
         {dateData:'2022-12-10 14:00',start:'1'},
@@ -407,8 +431,9 @@ function Bmmf () {
         }
   return (
       <Container>
+        
       {/* <ImgLogo src='https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/302752761_10158034750784364_4826772492468966894_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGADD_IFrjnpGdiekQXMLnmI2pNPTGpjtUjak09MamO1RbwmWmSif22biMxG54HRAnjcx-fAZwTllFqdGI2YBSL&_nc_ohc=aB0rfooew18AX9eqzvD&_nc_ht=scontent.fbkk5-7.fna&oh=00_AfBODlx6VPGsE66gtNVXp0eGCIWRzplv1cVpZ6hNQXZtSg&oe=638DA5DD'/> */}
-    
+  
     <FlexStage>
         <DivStage>
         <DotColor bgColor={'#0c545c'}/>
@@ -456,14 +481,20 @@ function Bmmf () {
         </DivStage>
 
     </FlexStage>
-    <FlexData>
-        {defaultTime.map((data)=><TimeTable><TextTime>{new Date(data.dateData).getHours()}.00</TextTime></TimeTable>)}
-    </FlexData>
 
-    <FlexData>
-    <DateConcert>
+    <FlexDate>
+    <DateConcert onClick={()=> setSelectDate(1)} bg={selectDate === 1 && true}>
         <TextDate>วันที่ 10</TextDate>
     </DateConcert>
+
+    <DateConcert onClick={()=> setSelectDate(2)}  bg={selectDate === 2 && true}>
+        <TextDate>วันที่ 11</TextDate>
+    </DateConcert>
+    </FlexDate>
+
+    <ContainerTable>
+    <FlexData>
+        {defaultTime.map((data)=><TimeTable><TextTime>{new Date(data.dateData).getHours()}.00</TextTime></TimeTable>)}
     </FlexData>
 
     <FlexData>
@@ -513,58 +544,10 @@ function Bmmf () {
                     )}
             </TimeTableArtis>)}
     </FlexData>
+    </ContainerTable>
 
 
-   <FlexData>
-    <DateConcert>
-        <TextDate>วันที่ 11</TextDate>
-    </DateConcert>
-    </FlexData>
-
-    <FlexData>
-            {defaultTime.map((data)=>
-            <TimeTableArtis >
-                {dataSatgeSecond.map((value)=> 
-                    new Date(value.start).getHours() === new Date(data.dateData).getHours() && 
-                    <TabStage 
-                    top={   
-                        value.stage === 1 ? '0%':
-                        value.stage === 2 ? '11.11%':
-                        value.stage === 3 ? '22.22%':
-                        value.stage === 4 ? '33.33%':
-                        value.stage === 5 ? '44.44%':
-                        value.stage === 6 ? '55.55%':
-                        value.stage === 7 ? '66.66%':
-                        value.stage === 8 ? '77.77%':
-                        value.stage === 9 && '88.88%'
-                        }
-                    width={(value.time/60)*100}
-                    bgColor={
-                        value.stage === 1 ?'#0c545c':
-                        value.stage === 2 ? '#aa4088':
-                        value.stage === 3 ? '#f6d55c':
-                        value.stage === 4 ?'#5c5cc6':
-                        value.stage === 5 ? '#9fe7f5':
-                        value.stage === 6 ? '#fb6d10':
-                        value.stage === 7 ? '#f11548':
-                        value.stage === 8 ? '#fdbf52':
-                        value.stage === 9 && '#138086'
-                        }
-                    left={(new Date(value.start).getMinutes()/60)*100}
-                    >
-                    <TextArtist color={
-                                        value.stage === 3 || 
-                                        value.stage === 5 ||
-                                        value.stage === 6 ||
-                                        value.stage === 8 && true}>
-                    {value.Artist }
-                    </TextArtist>
-                    </TabStage>
-                    )}
-            </TimeTableArtis>)}
-    </FlexData>
-
-    {showModal !==false && 
+                    {showModal !==false && 
                     dataSatgeFrist.map((value,key)=> 
                     <>
                     
@@ -640,7 +623,7 @@ function Bmmf () {
                             showModal.stage === 6 ||
                             showModal.stage === 8 && true}
                     >
-                       { showModal.id === dataSelect.find(element => element.id === showModal.id)?.id?
+                    { showModal.id === dataSelect.find(element => element.id === showModal.id)?.id?
                         'ลบ' :'เลือก'}
                     </ButtonSelect>
                     </ModalArtist>
