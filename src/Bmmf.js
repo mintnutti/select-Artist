@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 const Container = styled.div`
-  width: 100%;
+  width: 1200px;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -10,6 +10,7 @@ const Container = styled.div`
   margin-bottom:80px ;
   margin-top:80px;
   position:relative ;
+  overflow-x:scroll ;
 `
 
 const TimeTable= styled.div` 
@@ -58,8 +59,8 @@ position:relative ;
 cursor:pointer ;
 `
 const DateConcert= styled.div` 
-width:6.25%;
-height:40px;
+width:75px;
+height:30px;
 background-color:#252525 ;
 border-radius:100px ;
 position:relative ;
