@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+
 const Container = styled.div`
   width: 100%;
   max-width: 1440px;
@@ -17,10 +18,10 @@ const ContainerTable = styled.div`
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
+  height: 300px;
   text-align:center ;
-  margin-bottom:80px ;
-  margin-top:20px;
+  margin-bottom:40px ;
+  margin-top:10px;
   position:relative ;
   overflow-x:scroll ;
 `
@@ -44,12 +45,12 @@ margin-bottom:10px ;
 `
 
 const FlexDate = styled.div` 
-width:90%;
+width:fit-content;
+max-width:90%;
 display:flex;
 margin-top:0px ;
 margin-left:auto ;
 margin-right:auto ;
-margin-bottom:10px ;
 `
 
 const TextTime = styled.div` 
@@ -96,6 +97,17 @@ left: 50%;
 transform: translate(-50%, -50%);
 font-weight:300;
 color:${({color})=>color === true ? '#000000': '#FFFFFF'};
+width:90%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+text-transform: uppercase;
+`
+
+const TextArtistSelect = styled.span` 
+font-size:1rem ;
+font-weight:300;
+color:${({color})=>color};
 width:90%;
 white-space: nowrap;
 overflow: hidden;
@@ -192,6 +204,24 @@ margin-top:40px;
 margin-bottom:10px ;
 text-transform: uppercase;
 `
+
+const TextDes= styled.div` 
+font-size:0.75rem ;
+color:#252525 ;
+margin-top:10px;
+margin-bottom:10px ;
+text-transform: uppercase;
+`
+
+const XSURFACEText= styled.span` 
+font-size:0.75rem ;
+color:#E13B30;
+margin-top:10px;
+margin-bottom:10px ;
+text-transform: uppercase;
+cursor: pointer;
+text-decoration: underline;
+`
 const TextModal = styled.div` 
 font-size:1rem ;
 color:${({bgColor})=>bgColor} ;
@@ -228,6 +258,19 @@ right:-5px ;
 border-radius:100px ;
 font-size:0.75rem ;
 cursor:pointer ;
+`
+
+const DivSelectDataArtist = styled.div`
+width:fit-content;
+max-width:90% ;
+margin-left:auto;
+margin-right:auto ;
+`
+const SelectDataArtist = styled.div`
+margin-bottom:10px ;
+text-transform: uppercase;
+font-size: 1rem;
+text-align:left ;
 `
 function Bmmf () {
 
@@ -433,7 +476,11 @@ function Bmmf () {
       <Container>
         
       {/* <ImgLogo src='https://scontent.fbkk5-7.fna.fbcdn.net/v/t39.30808-6/302752761_10158034750784364_4826772492468966894_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGADD_IFrjnpGdiekQXMLnmI2pNPTGpjtUjak09MamO1RbwmWmSif22biMxG54HRAnjcx-fAZwTllFqdGI2YBSL&_nc_ohc=aB0rfooew18AX9eqzvD&_nc_ht=scontent.fbkk5-7.fna&oh=00_AfBODlx6VPGsE66gtNVXp0eGCIWRzplv1cVpZ6hNQXZtSg&oe=638DA5DD'/> */}
-  
+      <FlexDate>
+    <TextDes>
+        - develop by mint <XSURFACEText onClick={()=> window.open('https://xsurface.com/')}>XSURFACE</XSURFACEText> - 
+    </TextDes>
+    </FlexDate>
     <FlexStage>
         <DivStage>
         <DotColor bgColor={'#0c545c'}/>
@@ -491,7 +538,11 @@ function Bmmf () {
         <TextDate>วันที่ 11</TextDate>
     </DateConcert>
     </FlexDate>
-
+    <FlexDate>
+    <TextDes>
+        ***กดที่ชื่อศิลปินเพื่อเลือก***
+    </TextDes>
+    </FlexDate>
     <ContainerTable>
     <FlexData>
         {defaultTime.map((data)=><TimeTable><TextTime>{new Date(data.dateData).getHours()}.00</TextTime></TimeTable>)}
@@ -546,7 +597,44 @@ function Bmmf () {
     </FlexData>
     </ContainerTable>
 
+<DivSelectDataArtist>
+<SelectDataArtist>
+    ***รายชื่อศิลปินที่เลือก วันที่ {selectDate === 1 ? '10':'11'}***
+</SelectDataArtist>
+    {dataSelect?.map((data)=>
+    <SelectDataArtist>
+        <>
+    {data.Artist} - {new Date(data.start).getHours()}:{new Date(data.start).getMinutes() === 0 ? '00':new Date(data.start).getMinutes()}น.-{data.end}น. -&nbsp;
+    </>
+    <TextArtistSelect
+    color={
+        data.stage === 1 ?'#0c545c':
+        data.stage === 2 ? '#aa4088':
+        data.stage === 3 ? '#f6d55c':
+        data.stage === 4 ?'#5c5cc6':
+        data.stage === 5 ? '#9fe7f5':
+        data.stage === 6 ? '#fb6d10':
+        data.stage === 7 ? '#f11548':
+        data.stage === 8 ? '#fdbf52':
+        data.stage === 9 && '#138086'
+        }
+    >
+    {
+                    data.stage === 1 ?'MOUNTAIN STAGE':
+                    data.stage === 2 ? 'COW STAGE':
+                    data.stage === 3 ? 'BLOCK STAGE':
+                    data.stage === 4 ?'EGG STAGE':
+                    data.stage === 5 ? 'PEPSI CHIC STAGE':
+                    data.stage === 6 ? 'KRATOM STAGE':
+                    data.stage === 7 ? 'FOR-REST STAGE':
+                    data.stage === 8 ? 'บาร์รำวง':
+                    data.stage === 9 && 'อโคจรผับ'}
+    </TextArtistSelect>
+    </SelectDataArtist>
+    
+    )}
 
+</DivSelectDataArtist>
                     {showModal !==false && 
                     dataSatgeFrist.map((value,key)=> 
                     <>
@@ -569,7 +657,7 @@ function Bmmf () {
                         }
                     >{showModal.Artist}</TextName>
                     <TextModal>
-                    เวลา {new Date(showModal.start).getHours()}:{new Date(showModal.start).getMinutes()}-
+                    เวลา {new Date(showModal.start).getHours()}:{new Date(showModal.start).getMinutes() === 0 ? '00':new Date(showModal.start).getMinutes()}-
                     {showModal.end}
                     </TextModal>
                     <TextModal>
