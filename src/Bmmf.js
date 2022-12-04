@@ -133,7 +133,7 @@ margin-bottom:30px ;
 
 const ModalArtist = styled.div` 
 position:absolute;
-width:400px;
+width:350px;
 height:250px;
 background-color:#fafafa;
 box-shadow: 0 3px 20px #00000002;
