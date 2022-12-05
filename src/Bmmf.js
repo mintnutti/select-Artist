@@ -169,7 +169,7 @@ position:absolute;
 width:300px;
 height:250px;
 background-color:#fafafa;
-box-shadow: 0 3px 20px #00000002;
+box-shadow: 3px 3px 20px 3px #00000001;
 z-index:10 ;
 top: 50%;
 left: 50%;
@@ -219,6 +219,7 @@ margin-bottom:10px ;
 text-transform: uppercase;
 cursor: pointer;
 text-decoration: underline;
+font-weight:900 ;
 `
 const TextModal = styled.div` 
 font-size:1rem ;
