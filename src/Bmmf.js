@@ -263,6 +263,8 @@ width:fit-content;
 max-width:90% ;
 margin-left:auto;
 margin-right:auto ;
+padding-bottom:50px ;
+height:fit-content ;
 `
 const SelectDataArtist = styled.div`
 margin-bottom:10px ;
@@ -299,11 +301,11 @@ function Bmmf () {
             {id:2,Artist:'Getsunova',start:'2022-12-10 18:30',end:'19:15',time:45,stage:1},
             {id:3,Artist:'Num kala',start:'2022-12-10 19:30',end:'20:15',time:45,stage:1},
             {id:4,Artist:'Big ass',start:'2022-12-10 20:30',end:'21:15',time:45,stage:1},
-            {id:5,Artist:'Clocktail',start:'2022-12-10 21:30',end:'22:15',time:45,stage:1},
+            {id:5,Artist:'Cocktail',start:'2022-12-10 21:30',end:'22:15',time:45,stage:1},
             {id:6,Artist:'Potato',start:'2022-12-10 22:30',end:'23:15',time:45,stage:1},
             {id:7,Artist:'Slot machine',start:'2022-12-10 23:30',end:'00:15',time:45,stage:1},
             {id:8,Artist:'Boom boom cash',start:'2022-12-10 00:30',end:'01:00',time:30,stage:1},
-            {id:9,Artist:'F.hero x bear khuckle',start:'2022-12-10 01:00',end:'02:00',time:60,stage:1},
+            {id:9,Artist:'F.hero x bear knuckle',start:'2022-12-10 01:00',end:'02:00',time:60,stage:1},
             {id:10,Artist:'Ally',start:'2022-12-10 17:15',end:'17:45',time:30,stage:2},
             {id:11,Artist:'Zom marie',start:'2022-12-10 18:00',end:'18:45',time:45,stage:2},
             {id:12,Artist:'Violette wautier',start:'2022-12-10 19:00',end:'19:45',time:45,stage:2},
@@ -320,7 +322,7 @@ function Bmmf () {
             {id:23,Artist:'Billkin x pp krit',start:'2022-12-10 20:30',end:'21:15',time:45,stage:3},
             {id:24,Artist:'the toys',start:'2022-12-10 21:30',end:'22:15',time:45,stage:3},
             {id:25,Artist:'lham somphol',start:'2022-12-10 22:30',end:'23:15',time:45,stage:3},
-            {id:26,Artist:'vannda(hh)',start:'2022-12-10 23:20',end:'00:15',time:45,stage:3},
+            {id:26,Artist:'vannda(hh)',start:'2022-12-10 23:30',end:'00:15',time:45,stage:3},
             {id:27,Artist:'twopee southside x xoflow',start:'2022-12-10 00:30',end:'01.15',time:45,stage:3},
             {id:28,Artist:'bomb at track',start:'2022-12-10 01:30',end:'02:15',time:45,stage:3},
             {id:29,Artist:'sweet mullet',start:'2022-12-10 02:30',end:'03:15',time:45,stage:3},
@@ -328,12 +330,12 @@ function Bmmf () {
             {id:31,Artist:'h 3 f',start:'2022-12-10 16:00',end:'16:45',time:45,stage:4},
             {id:32,Artist:'luss',start:'2022-12-10 17:00',end:'17:45',time:45,stage:4},
             {id:33,Artist:'เขียนไขและวานิช',start:'2022-12-10 18:00',end:'18:45',time:45,stage:4},
-            {id:34,Artist:'interflow: chapter 1 presentted by bpm plus asia',start:'2022-12-10 19:00',end:'19:45',time:45,stage:4},
-            {id:35,Artist:'prtrickrnanda',start:'2022-12-10 20:00',end:'20:45',time:45,stage:4},
+            {id:34,Artist:'interflow: chapter 1 presented by bpm plus asia',start:'2022-12-10 19:00',end:'19:45',time:45,stage:4},
+            {id:35,Artist:'patrickananda',start:'2022-12-10 20:00',end:'20:45',time:45,stage:4},
             {id:36,Artist:'ไปส่งกู บขส.ดู๊',start:'2022-12-10 21:00',end:'21:45',time:45,stage:4},
             {id:37,Artist:'mirrr',start:'2022-12-10 22:00',end:'22:45',time:45,stage:4},
             {id:38,Artist:'desktop error',start:'2022-12-10 23:00',end:'23:45',time:45,stage:4},
-            {id:39,Artist:'srfeplanet',start:'2022-12-10 00:00',end:'00:45',time:45,stage:4},
+            {id:39,Artist:'safeplanet',start:'2022-12-10 00:00',end:'00:45',time:45,stage:4},
             {id:40,Artist:'yew',start:'2022-12-10 15:15',end:'15:45',time:30,stage:5},
             {id:41,Artist:'television off',start:'2022-12-10 16:00',end:'16:30',time:30,stage:5},
             {id:42,Artist:'freehand',start:'2022-12-10 16:45',end:'17:15',time:30,stage:5},
@@ -369,95 +371,100 @@ function Bmmf () {
             {id:72,Artist:'ระเบียบวาทะศิลป์',start:'2022-12-10 01:15',end:'02:15',time:60,stage:8},
             {id:73,Artist:'dj ยกล้อ',start:'2022-12-10 02:30',end:'03:30',time:60,stage:8},
             {id:74,Artist:'akojorn project band',start:'2022-12-10 17:30',end:'18:30',time:60,stage:9},
-            {id:75,Artist:'ปีเตอร์ คอร์ป x จั๊ก ชวิน x ต้าร์ mr.team',start:'2022-12-10 20:00',end:'21:00',time:60,stage:9},
+            {id:75,Artist:'ปีเตอร์ คอร์ป ไดเรนดัล x จั๊ก ชวิน x ต้าร์ mr.team',start:'2022-12-10 20:00',end:'21:00',time:60,stage:9},
             {id:76,Artist:'on the way',start:'2022-12-10 21:30',end:'22:30',time:60,stage:9},
             {id:77,Artist:'pimrypie',start:'2022-12-10 23:00',end:'00:00',time:60,stage:9},
             {id:78,Artist:'on the way',start:'2022-12-10 00:30',end:'01:30',time:60,stage:9},
-            {id:79,Artist:'jspkk (แจ๊ส สปุ๊กนิค ปาปิยอง กุ๊กกุ๊ก)',start:'2022-12-10 02:00',end:'02:00',time:60,stage:9},
+            {id:79,Artist:'jspkk (แจ๊ส สปุ๊กนิค ปาปิยอง กุ๊กกุ๊ก)',start:'2022-12-10 02:00',end:'03:00',time:60,stage:9},
             {id:80,Artist:'dj leo',start:'2022-12-10 03:00',end:'05:00',time:120,stage:9},
             ]
 
-            const dataSatgeSecond =[
-                {Artist:'Klear',start:'2022-12-10 17:30',end:'18:15',time:45,stage:1},
-                {Artist:'Getsunova',start:'2022-12-10 18:30',end:'19:15',time:45,stage:1},
-                {Artist:'Num kala',start:'2022-12-10 19:30',end:'20:15',time:45,stage:1},
-                {Artist:'Big ass',start:'2022-12-10 20:30',end:'21:15',time:45,stage:1},
-                {Artist:'Clocktail',start:'2022-12-10 21:30',end:'22:15',time:45,stage:1},
-                {Artist:'Potato',start:'2022-12-10 22:30',end:'23:15',time:45,stage:1},
-                {Artist:'Slot machine',start:'2022-12-10 23:30',end:'00:15',time:45,stage:1},
-                {Artist:'Boom boom cash',start:'2022-12-10 00:30',end:'01:00',time:30,stage:1},
-                {Artist:'F.hero x bear khuckle',start:'2022-12-10 01:00',end:'02:00',time:60,stage:1},
-                {Artist:'Ally',start:'2022-12-10 17:15',end:'17:45',time:30,stage:2},
-                {Artist:'Zom marie',start:'2022-12-10 18:00',end:'18:45',time:45,stage:2},
-                {Artist:'Violette wautier',start:'2022-12-10 19:00',end:'19:45',time:45,stage:2},
-                {Artist:'Bowkylion',start:'2022-12-10 20:00',end:'20:45',time:45,stage:2},
-                {Artist:'The parkinson',start:'2022-12-10 21:00',end:'21:45',time:45,stage:2},
-                {Artist:'Nont tanont',start:'2022-12-10 22:00',end:'22:45',time:45,stage:2},
-                {Artist:'Stamp',start:'2022-12-10 23:00',end:'23:45',time:45,stage:2},
-                {Artist:'Lipta',start:'2022-12-10 00:00',end:'00:45',time:45,stage:2},
-                {Artist:'Tattoo colour',start:'2022-12-10 01:00',end:'01:45',time:45,stage:2},
-                {Artist:'The darkest romance',start:'2022-12-10 16:00',end:'16:45',time:45,stage:3},
-                {Artist:'Paper planes',start:'2022-12-10 17:00',end:'17:45',time:45,stage:3},
-                {Artist:'Baby mic candy(jp)',start:'2022-12-10 18:00',end:'18:30',time:30,stage:3},
-                {Artist:'Gmmtv super band(Bright x win x krist x nanon)',start:'2022-12-10 18:45',end:'20:15',time:90,stage:3},
-                {Artist:'Billkin x pp krit',start:'2022-12-10 20:30',end:'21:15',time:45,stage:3},
-                {Artist:'the toys',start:'2022-12-10 21:30',end:'22:15',time:45,stage:3},
-                {Artist:'lham somphol',start:'2022-12-10 22:30',end:'23:15',time:45,stage:3},
-                {Artist:'vannda(hh)',start:'2022-12-10 23:20',end:'00:15',time:45,stage:3},
-                {Artist:'twopee southside x xoflow',start:'2022-12-10 00:30',end:'01.15',time:45,stage:3},
-                {Artist:'bomb at track',start:'2022-12-10 01:30',end:'02:15',time:45,stage:3},
-                {Artist:'sweet mullet',start:'2022-12-10 02:30',end:'03:15',time:45,stage:3},
-                {Artist:'the whitest crow',start:'2022-12-10 15:00',end:'15:45',time:45,stage:4},
-                {Artist:'h 3 f',start:'2022-12-10 16:00',end:'16:45',time:45,stage:4},
-                {Artist:'luss',start:'2022-12-10 17:00',end:'17:45',time:45,stage:4},
-                {Artist:'เขียนไขและวานิช',start:'2022-12-10 18:00',end:'18:45',time:45,stage:4},
-                {Artist:'interflow: chapter 1 presentted by bpm plus asia',start:'2022-12-10 19:00',end:'19:45',time:45,stage:4},
-                {Artist:'prtrickrnanda',start:'2022-12-10 20:00',end:'20:45',time:45,stage:4},
-                {Artist:'ไปส่งกู บขส.ดู๊',start:'2022-12-10 21:00',end:'21:45',time:45,stage:4},
-                {Artist:'mirrr',start:'2022-12-10 22:00',end:'22:45',time:45,stage:4},
-                {Artist:'desktop error',start:'2022-12-10 23:00',end:'23:45',time:45,stage:4},
-                {Artist:'srfeplanet',start:'2022-12-10 00:00',end:'00:45',time:45,stage:4},
-                {Artist:'yew',start:'2022-12-10 15:15',end:'15:45',time:30,stage:5},
-                {Artist:'television off',start:'2022-12-10 16:00',end:'16:30',time:30,stage:5},
-                {Artist:'freehand',start:'2022-12-10 16:45',end:'17:15',time:30,stage:5},
-                {Artist:'purpeech',start:'2022-12-10 17:30',end:'18:00',time:30,stage:5},
-                {Artist:'quicksand bed',start:'2022-12-10 18:15',end:'18:45',time:30,stage:5},
-                {Artist:'the white hair cut',start:'2022-12-10 19:00',end:'19:30',time:30,stage:5},
-                {Artist:'blackbeans',start:'2022-12-10 19:45',end:'20:15',time:30,stage:5},
-                {Artist:'hens',start:'2022-12-10 20:30',end:'21:00',time:30,stage:5},
-                {Artist:'bell warisara',start:'2022-12-10 21:15',end:'21:45',time:30,stage:5},
-                {Artist:'serious bacon',start:'2022-12-10 22:00',end:'22:30',time:30,stage:5},
-                {Artist:'slapkiss',start:'2022-12-10 22:45',end:'23:15',time:30,stage:5},
-                {Artist:'_less',start:'2022-12-10 16:00',end:'16:30',time:30,stage:6},
-                {Artist:'common people like you',start:'2022-12-10 16:45',end:'17:15',time:30,stage:6},
-                {Artist:'kiki',start:'2022-12-10 17:30',end:'18:00',time:30,stage:6},
-                {Artist:'panpan yeeyee',start:'2022-12-10 18:15',end:'18:45',time:30,stage:6},
-                {Artist:'tinn',start:'2022-12-10 19:00',end:'19:30',time:30,stage:6},
-                {Artist:'tofu',start:'2022-12-10 19:45',end:'20:15',time:30,stage:6},
-                {Artist:'door plant',start:'2022-12-10 20:30',end:'21:00',time:30,stage:6},
-                {Artist:'summer dress',start:'2022-12-10 21:15',end:'21:45',time:30,stage:6},
-                {Artist:'hybs',start:'2022-12-10 22:00',end:'22:30',time:30,stage:6},
-                {Artist:'random dance',start:'2022-12-10 14:00',end:'14:40',time:40,stage:7},
-                {Artist:'phranakhon ensemble',start:'2022-12-10 15:00',end:'15:45',time:45,stage:7},
-                {Artist:'good mood',start:'2022-12-10 16:00',end:'16:45',time:45,stage:7},
-                {Artist:'gmm academy',start:'2022-12-10 17:00',end:'18:30',time:90,stage:7},
-                {Artist:'yes indeed',start:'2022-12-10 18:45',end:'19:30',time:45,stage:7},
-                {Artist:'shata',start:'2022-12-10 19:45',end:'20:15',time:30,stage:7},
-                {Artist:'movie club',start:'2022-12-10 20:30',end:'23:00',time:150,stage:7},
-                {Artist:'ระเบียบวาทะศิลป์',start:'2022-12-10 18:30',end:'20:00',time:90,stage:8},
-                {Artist:'vaseline band',start:'2022-12-10 20:15',end:'21:15',time:60,stage:8},
-                {Artist:'ระเบียบวาทะศิลป์',start:'2022-12-10 21:30',end:'22:30',time:60,stage:8},
-                {Artist:'จ๊ะ นงผณี',start:'2022-12-10 22:45',end:'23:45',time:60,stage:8},
-                {Artist:'vaseline band',start:'2022-12-10 00:00',end:'01:00',time:60,stage:8},
-                {Artist:'ระเบียบวาทะศิลป์',start:'2022-12-10 01:15',end:'02:15',time:60,stage:8},
-                {Artist:'dj ยกล้อ',start:'2022-12-10 02:30',end:'03:30',time:60,stage:8},
-                {Artist:'akojorn project band',start:'2022-12-10 17:30',end:'18:30',time:60,stage:9},
-                {Artist:'ปีเตอร์ คอร์ป x จั๊ก ชวิน x ต้าร์ mr.team',start:'2022-12-10 20:00',end:'21:00',time:60,stage:9},
-                {Artist:'on the way',start:'2022-12-10 21:30',end:'22:30',time:60,stage:9},
-                {Artist:'pimrypie',start:'2022-12-10 23:00',end:'00:00',time:60,stage:9},
-                {Artist:'on the way',start:'2022-12-10 00:30',end:'01:30',time:60,stage:9},
-                {Artist:'jspkk (แจ๊ส สปุ๊กนิค ปาปิยอง กุ๊กกุ๊ก)',start:'2022-12-10 02:00',end:'02:00',time:60,stage:9},
-                {Artist:'dj leo',start:'2022-12-10 03:00',end:'05:00',time:120,stage:9},
+        const dataSatgeSecond =[
+            {id:81,Artist:'lomosonic',start:'2022-12-11 17:30',end:'18:15',time:45,stage:1},
+            {id:82,Artist:'milli',start:'2022-12-11 18:30',end:'19:15',time:45,stage:1},
+            {id:83,Artist:'urboytj',start:'2022-12-11 19:30',end:'20:15',time:45,stage:1},
+            {id:84,Artist:'three man down',start:'2022-12-11 20:30',end:'21:15',time:45,stage:1},
+            {id:85,Artist:'palmy',start:'2022-12-11 21:30',end:'22:15',time:45,stage:1},
+            {id:86,Artist:'labanoon',start:'2022-12-11 22:30',end:'23:15',time:45,stage:1},
+            {id:87,Artist:'bodyslam',start:'2022-12-11 23:30',end:'00:15',time:45,stage:1},
+            {id:88,Artist:'clash',start:'2022-12-11 00:30',end:'01:15',time:45,stage:1},
+            {id:89,Artist:'taitosmith',start:'2022-12-11 01:00',end:'02:15',time:75,stage:1},
+            {id:162,Artist:'laz1',start:'2022-12-11 15:30',end:'16:00',time:30,stage:2},
+            {id:163,Artist:'proxie',start:'2022-12-11 16:15',end:'15:45',time:30,stage:2},
+            {id:90,Artist:'pun x txrbo x pearwah',start:'2022-12-11 17:00',end:'17:45',time:45,stage:2},
+            {id:91,Artist:'paradox',start:'2022-12-11 18:00',end:'18:45',time:45,stage:2},
+            {id:92,Artist:'lula',start:'2022-12-11 19:00',end:'19:45',time:45,stage:2},
+            {id:93,Artist:'oat pramote',start:'2022-12-11 20:00',end:'20:45',time:45,stage:2},
+            {id:94,Artist:'pop pongkool',start:'2022-12-11 21:00',end:'21:45',time:45,stage:2},
+            {id:95,Artist:'ink waruntorn',start:'2022-12-11 22:00',end:'22:45',time:45,stage:2},
+            {id:96,Artist:'singto numchok',start:'2022-12-11 23:00',end:'23:45',time:45,stage:2},
+            {id:97,Artist:'scrubb',start:'2022-12-11 00:00',end:'00:45',time:45,stage:2},
+            {id:98,Artist:'polycat',start:'2022-12-11 01:00',end:'01:45',time:45,stage:2},
+            {id:164,Artist:'atlas',start:'2022-12-11 15:00',end:'15:30',time:30,stage:3},
+            {id:99,Artist:'matcha x kin x alala x perses',start:'2022-12-11 15:45',end:'16:30',time:45,stage:3},
+            {id:100,Artist:'pixxie x bamm x proo thunwa',start:'2022-12-11 16:45',end:'17:30',time:45,stage:3},
+            {id:101,Artist:'ballistik boyz x psychic fever from exile tribe (jp)',start:'2022-12-11 17:45',end:'18:30',time:45,stage:3},
+            {id:102,Artist:'4mix',start:'2022-12-11 18:45',end:'19:30',time:45,stage:3},
+            {id:103,Artist:'4eve',start:'2022-12-11 19:45',end:'20:30',time:45,stage:3},
+            {id:104,Artist:'tilly birds',start:'2022-12-11 20:45',end:'21:30',time:45,stage:3},
+            {id:105,Artist:'saran x dieout',start:'2022-12-11 21:45',end:'22:15',time:45,stage:3},
+            {id:106,Artist:'sprite,guygeegee,og bobby,seeda thevillain,don kids,iceace,eskiimo',start:'2022-12-11 22:30',end:'23:15',time:45,stage:3},
+            {id:107,Artist:'autta,namemt,ainn,flower.far,fizzie,galchanie',start:'2022-12-11 23:30',end:'00.30',time:60,stage:3},
+            {id:108,Artist:'d gerrard',start:'2022-12-11 00:45',end:'01:30',time:45,stage:3},
+            {id:109,Artist:'thaitanium',start:'2022-12-11 01:45',end:'02:30',time:45,stage:3},
+            {id:110,Artist:'only monday',start:'2022-12-11 15:00',end:'15:45',time:45,stage:4},
+            {id:111,Artist:'greasy cafe',start:'2022-12-11 16:00',end:'16:45',time:45,stage:4},
+            {id:112,Artist:'joey phuwasit',start:'2022-12-11 17:00',end:'17:45',time:45,stage:4},
+            {id:113,Artist:'คณะขวัญใจ',start:'2022-12-11 18:00',end:'18:45',time:45,stage:4},
+            {id:114,Artist:'จุลโหราฬ',start:'2022-12-11 19:00',end:'19:45',time:45,stage:4},
+            {id:115,Artist:'jisokuryclub(kr)',start:'2022-12-11 20:00',end:'20:45',time:45,stage:4},
+            {id:116,Artist:'anatomy rabbit',start:'2022-12-11 21:00',end:'21:45',time:45,stage:4},
+            {id:117,Artist:'dept',start:'2022-12-11 22:00',end:'22:45',time:45,stage:4},
+            {id:118,Artist:'the yers',start:'2022-12-11 23:00',end:'23:45',time:45,stage:4},
+            {id:119,Artist:'phum viphurit',start:'2022-12-11 00:00',end:'00:45',time:45,stage:4},
+            {id:165,Artist:'whal & dolph',start:'2022-12-11 01:00',end:'01:45',time:45,stage:4},
+            {id:120,Artist:'คณะสีหยืด',start:'2022-12-11 15:15',end:'15:45',time:30,stage:5},
+            {id:121,Artist:'bad baboon',start:'2022-12-11 16:00',end:'16:30',time:30,stage:5},
+            {id:122,Artist:'yourmood',start:'2022-12-11 16:45',end:'17:15',time:30,stage:5},
+            {id:123,Artist:'sarah salola',start:'2022-12-11 17:30',end:'18:00',time:30,stage:5},
+            {id:124,Artist:'no one else',start:'2022-12-11 18:15',end:'18:45',time:30,stage:5},
+            {id:125,Artist:'uncle ben',start:'2022-12-11 19:00',end:'19:30',time:30,stage:5},
+            {id:126,Artist:'temp.',start:'2022-12-11 19:45',end:'20:15',time:30,stage:5},
+            {id:127,Artist:'death of heather',start:'2022-12-11 20:30',end:'21:00',time:30,stage:5},
+            {id:128,Artist:'solitude is bliss',start:'2022-12-11 21:15',end:'21:45',time:30,stage:5},
+            {id:129,Artist:'yented',start:'2022-12-11 22:00',end:'22:30',time:30,stage:5},
+            {id:130,Artist:`zweed n' rppl`,start:'2022-12-11 22:45',end:'23:15',time:30,stage:5},
+            {id:131,Artist:'potato (acoustic)',start:'2022-12-11 16:00',end:'16:45',time:45,stage:6},
+            {id:132,Artist:'sammii',start:'2022-12-11 17:00',end:'17:30',time:30,stage:6},
+            {id:133,Artist:'landokmai',start:'2022-12-11 17:45',end:'18:15',time:30,stage:6},
+            {id:134,Artist:'youth brush',start:'2022-12-11 18:30',end:'19:00',time:30,stage:6},
+            {id:135,Artist:'มนัสวีร์',start:'2022-12-11 19:15',end:'19:45',time:30,stage:6},
+            {id:136,Artist:'ดวงดาวเดียวดาย',start:'2022-12-11 20:00',end:'20:30',time:30,stage:6},
+            {id:137,Artist:'stoondio',start:'2022-12-11 20:45',end:'21:15',time:30,stage:6},
+            {id:138,Artist:'southern boys',start:'2022-12-11 21:30',end:'22:00',time:30,stage:6},
+            {id:139,Artist:'อพาร์ตเมนต์คุณป้า',start:'2022-12-11 22:15',end:'22:45',time:30,stage:6},
+            {id:140,Artist:'random dance',start:'2022-12-11 14:00',end:'14:40',time:40,stage:7},
+            {id:141,Artist:'phranakhon ensemble',start:'2022-12-11 15:00',end:'15:45',time:45,stage:7},
+            {id:142,Artist:'tofee',start:'2022-12-11 16:00',end:'16:30',time:30,stage:7},
+            {id:166,Artist:'t!ne',start:'2022-12-11 16:30',end:'17:00',time:30,stage:7},
+            {id:143,Artist:'tndtle',start:'2022-12-11 17:00',end:'17:30',time:30,stage:7},
+            {id:144,Artist:'rattanr vinyl set',start:'2022-12-11 17:45',end:'18:45',time:60,stage:7},
+            {id:145,Artist:'shata',start:'2022-12-11 19:00',end:'19:30',time:30,stage:7},
+            {id:146,Artist:'movie club',start:'2022-12-11 19:45',end:'22:30',time:165,stage:7},
+            {id:147,Artist:'ระเบียบวาทะศิลป์',start:'2022-12-11 18:30',end:'20:00',time:90,stage:8},
+            {id:148,Artist:'vaseline band',start:'2022-12-11 20:15',end:'21:15',time:60,stage:8},
+            {id:149,Artist:'grammy gold show zapp (หญิงลี ศรีจุมพล,ลำเพลิน วงศกร,เบลล์ นิภาดา,เวียง นฤมล,มีนตรา อินทิรา,newcountry)',start:'2022-12-11 21:30',end:'23:10',time:100,stage:8},
+            {id:150,Artist:'ระเบียบวาทะศิลป์',start:'2022-12-11 23:15',end:'00:15',time:60,stage:8},
+            {id:151,Artist:'vaseline band',start:'2022-12-11 00:30',end:'01:30',time:60,stage:8},
+            {id:152,Artist:'ระเบียบวาทะศิลป์',start:'2022-12-11 01:45',end:'02:45',time:60,stage:8},
+            {id:153,Artist:'dj ยกล้อ',start:'2022-12-11 02:45',end:'03:30',time:45,stage:8},
+            {id:154,Artist:'akojorn project band',start:'2022-12-11 17:30',end:'18:30',time:60,stage:9},
+            {id:155,Artist:'เอ๊ะ จิรากร',start:'2022-12-11 20:00',end:'21:00',time:60,stage:9},
+            {id:156,Artist:'on the way',start:'2022-12-11 21:30',end:'22:30',time:60,stage:9},
+            {id:157,Artist:'paradox',start:'2022-12-11 23:00',end:'00:00',time:60,stage:9},
+            {id:158,Artist:'on the way',start:'2022-12-11 00:30',end:'01:30',time:60,stage:9},
+            {id:159,Artist:'mocca garden',start:'2022-12-11 02:00',end:'03:00',time:60,stage:9},
+            {id:160,Artist:'dj leo',start:'2022-12-11 03:00',end:'05:00',time:120,stage:9},
                 ]
 
         const selectValue = (data,status)=>{
@@ -491,7 +498,7 @@ function Bmmf () {
         </DivStage>
 
         <DivStage>
-        <DotColor bgColor={'#f6d55c'}/>
+        <DotColor bgColor={'#9a031e'}/>
         <TextStage>Block stage</TextStage>
         </DivStage>
 
@@ -501,7 +508,7 @@ function Bmmf () {
         </DivStage>
 
         <DivStage>
-        <DotColor bgColor={'#9fe7f5'}/>
+        <DotColor bgColor={'#003d5b'}/>
         <TextStage>Pepsi chic stage</TextStage>
         </DivStage>
 
@@ -548,7 +555,8 @@ function Bmmf () {
     <FlexData>
             {defaultTime.map((data)=>
             <TimeTableArtis>
-                {dataSatgeFrist.map((value,key)=> 
+            {selectDate === 1 ? 
+                dataSatgeFrist.map((value,key)=> 
                     new Date(value.start).getHours() === new Date(data.dateData).getHours() && 
                     <TabStage 
                     onClick={()=> setShowModal(value)}
@@ -568,9 +576,9 @@ function Bmmf () {
                     bgColor={
                         value.stage === 1 ?'#0c545c':
                         value.stage === 2 ? '#aa4088':
-                        value.stage === 3 ? '#f6d55c':
+                        value.stage === 3 ? '#9a031e':
                         value.stage === 4 ?'#5c5cc6':
-                        value.stage === 5 ? '#9fe7f5':
+                        value.stage === 5 ? '#003d5b':
                         value.stage === 6 ? '#fb6d10':
                         value.stage === 7 ? '#f11548':
                         value.stage === 8 ? '#fdbf52':
@@ -582,34 +590,76 @@ function Bmmf () {
                     <XStage>x</XStage>
                     } 
                     <TextArtist color={
-                                        value.stage === 3 || 
-                                        value.stage === 5 ||
                                         value.stage === 6 ||
                                         value.stage === 8 && true}>
                     {value.Artist }
                     </TextArtist>
                     </TabStage>
-                    )}
+                    ): 
+                    dataSatgeSecond.map((value,key)=> 
+                    new Date(value.start).getHours() === new Date(data.dateData).getHours() && 
+                    <TabStage 
+                    onClick={()=> setShowModal(value)}
+                    border= {value.id === dataSelect.find(element => element.id === value.id)?.id && true }
+                    top={   
+                        value.stage === 1 ? '2%':
+                        value.stage === 2 ? '13%':
+                        value.stage === 3 ? '24%':
+                        value.stage === 4 ? '35%':
+                        value.stage === 5 ? '46%':
+                        value.stage === 6 ? '57%':
+                        value.stage === 7 ? '68%':
+                        value.stage === 8 ? '79%':
+                        value.stage === 9 && '90%'
+                        }
+                    width={(value.time/60)*100}
+                    bgColor={
+                        value.stage === 1 ?'#0c545c':
+                        value.stage === 2 ? '#aa4088':
+                        value.stage === 3 ? '#9a031e':
+                        value.stage === 4 ?'#5c5cc6':
+                        value.stage === 5 ? '#003d5b':
+                        value.stage === 6 ? '#fb6d10':
+                        value.stage === 7 ? '#f11548':
+                        value.stage === 8 ? '#fdbf52':
+                        value.stage === 9 && '#138086'
+                        }
+                    left={(new Date(value.start).getMinutes()/60)*100}
+                    >
+                    {value.id === dataSelect.find(element => element.id === value.id)?.id && 
+                    <XStage>x</XStage>
+                    } 
+                    <TextArtist color={
+                                        value.stage === 6 ||
+                                        value.stage === 8 && true}>
+                    {value.Artist }
+                    </TextArtist>
+                    </TabStage>
+                    )
+                    
+                    }
             </TimeTableArtis>)}
     </FlexData>
     </ContainerTable>
 
 <DivSelectDataArtist>
 <SelectDataArtist>
-    ***รายชื่อศิลปินที่เลือก วันที่ {selectDate === 1 ? '10':'11'}***
+    ***รายชื่อศิลปินที่เลือก วันที่ {selectDate === 1 ? '10':'11'}*** เลือกเสร็จแล้วกดแคปหน้าจอรายชื่อศิลปินที่เลือก
+    {console.log('dataSelect',dataSelect)}
 </SelectDataArtist>
-    {dataSelect?.map((data)=>
+
+    {selectDate === 1 ?
+    dataSelect?.map((data)=>
+    new Date(data.start).getDate() === 10 &&
     <SelectDataArtist>
-        <>
-    {data.Artist} - {new Date(data.start).getHours()}:{new Date(data.start).getMinutes() === 0 ? '00':new Date(data.start).getMinutes()}น.-{data.end}น. -&nbsp;
-    </>
+    {data.Artist} - {new Date(data.start).getHours() < 10 ? '0'+new Date(data.start).getHours() :new Date(data.start).getHours()}:{new Date(data.start).getMinutes() === 0 ? '00':new Date(data.start).getMinutes()}น.-{data.end}น. -&nbsp;
     <TextArtistSelect
     color={
         data.stage === 1 ?'#0c545c':
         data.stage === 2 ? '#aa4088':
-        data.stage === 3 ? '#f6d55c':
+        data.stage === 3 ? '#9a031e':
         data.stage === 4 ?'#5c5cc6':
-        data.stage === 5 ? '#9fe7f5':
+        data.stage === 5 ? '#003d5b':
         data.stage === 6 ? '#fb6d10':
         data.stage === 7 ? '#f11548':
         data.stage === 8 ? '#fdbf52':
@@ -628,8 +678,39 @@ function Bmmf () {
                     data.stage === 9 && 'อโคจรผับ'}
     </TextArtistSelect>
     </SelectDataArtist>
-    
-    )}
+    ):
+    dataSelect?.map((data)=>
+    new Date(data.start).getDate() === 11 &&
+    <SelectDataArtist>
+    {data.Artist} - {new Date(data.start).getHours() < 10 ? '0'+new Date(data.start).getHours() :new Date(data.start).getHours()}:{new Date(data.start).getMinutes() === 0 ? '00':new Date(data.start).getMinutes()}น.-{data.end}น. -&nbsp;
+    <TextArtistSelect
+    color={
+        data.stage === 1 ?'#0c545c':
+        data.stage === 2 ? '#aa4088':
+        data.stage === 3 ? '#9a031e':
+        data.stage === 4 ?'#5c5cc6':
+        data.stage === 5 ? '#003d5b':
+        data.stage === 6 ? '#fb6d10':
+        data.stage === 7 ? '#f11548':
+        data.stage === 8 ? '#fdbf52':
+        data.stage === 9 && '#138086'
+        }
+    >
+    {
+                    data.stage === 1 ?'MOUNTAIN STAGE':
+                    data.stage === 2 ? 'COW STAGE':
+                    data.stage === 3 ? 'BLOCK STAGE':
+                    data.stage === 4 ?'EGG STAGE':
+                    data.stage === 5 ? 'PEPSI CHIC STAGE':
+                    data.stage === 6 ? 'KRATOM STAGE':
+                    data.stage === 7 ? 'FOR-REST STAGE':
+                    data.stage === 8 ? 'บาร์รำวง':
+                    data.stage === 9 && 'อโคจรผับ'}
+    </TextArtistSelect>
+    </SelectDataArtist>
+    )
+    }
+
 
 </DivSelectDataArtist>
                     {showModal !==false && 
@@ -644,9 +725,9 @@ function Bmmf () {
                     bgColor={
                         showModal.stage === 1 ?'#0c545c':
                         showModal.stage === 2 ? '#aa4088':
-                        showModal.stage === 3 ? '#f6d55c':
+                        showModal.stage === 3 ? '#9a031e':
                         showModal.stage === 4 ?'#5c5cc6':
-                        showModal.stage === 5 ? '#9fe7f5':
+                        showModal.stage === 5 ? '#003d5b':
                         showModal.stage === 6 ? '#fb6d10':
                         showModal.stage === 7 ? '#f11548':
                         showModal.stage === 8 ? '#fdbf52':
@@ -654,7 +735,7 @@ function Bmmf () {
                         }
                     >{showModal.Artist}</TextName>
                     <TextModal>
-                    เวลา {new Date(showModal.start).getHours()}:{new Date(showModal.start).getMinutes() === 0 ? '00':new Date(showModal.start).getMinutes()}-
+                    เวลา {new Date(showModal.start).getHours() < 10 ? '0'+new Date(showModal.start).getHours() :new Date(showModal.start).getHours()}:{new Date(showModal.start).getMinutes() === 0 ? '00':new Date(showModal.start).getMinutes()}-
                     {showModal.end}
                     </TextModal>
                     <TextModal>
@@ -664,9 +745,9 @@ function Bmmf () {
                     bgColor={
                         showModal.stage === 1 ?'#0c545c':
                         showModal.stage === 2 ? '#aa4088':
-                        showModal.stage === 3 ? '#f6d55c':
+                        showModal.stage === 3 ? '#9a031e':
                         showModal.stage === 4 ?'#5c5cc6':
-                        showModal.stage === 5 ? '#9fe7f5':
+                        showModal.stage === 5 ? '#003d5b':
                         showModal.stage === 6 ? '#fb6d10':
                         showModal.stage === 7 ? '#f11548':
                         showModal.stage === 8 ? '#fdbf52':
@@ -694,17 +775,15 @@ function Bmmf () {
                         '#cecece' :
                         showModal.stage === 1 ?'#0c545c':
                         showModal.stage === 2 ? '#aa4088':
-                        showModal.stage === 3 ? '#f6d55c':
+                        showModal.stage === 3 ? '#9a031e':
                         showModal.stage === 4 ?'#5c5cc6':
-                        showModal.stage === 5 ? '#9fe7f5':
+                        showModal.stage === 5 ? '#003d5b':
                         showModal.stage === 6 ? '#fb6d10':
                         showModal.stage === 7 ? '#f11548':
                         showModal.stage === 8 ? '#fdbf52':
                         showModal.stage === 9 && '#138086'
                         }
                         color={
-                            showModal.stage === 3 || 
-                            showModal.stage === 5 ||
                             showModal.stage === 6 ||
                             showModal.stage === 8 && true}
                     >
