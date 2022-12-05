@@ -279,6 +279,14 @@ function Bmmf () {
     const [dataSelect,setDataSelect]= useState([])
     const [selectDate,setSelectDate]= useState(1)
 
+   dataSelect?.sort(function (a, b) {
+        return a.start.localeCompare(b.start);
+    });
+    
+
+    console.log('dataSelect',dataSelect.map((data)=> new Date(data.start).getHours() > 3 && data.Artist + new Date(data.start).getHours() ))
+    
+
     const defaultTime =[
         {dateData:'2022/12/10 14:00',start:'1'},
         {dateData:'2022/12/10 15:00',start:'2'},
@@ -649,8 +657,11 @@ function Bmmf () {
 </SelectDataArtist>
 
     {selectDate === 1 ?
-    dataSelect?.map((data)=>
+    <>
+    <>
+    {dataSelect?.map((data,key)=>
     new Date(data.start).getDate() === 10 &&
+    new Date(data.start).getHours() > 4 && 
     <SelectDataArtist>
     {data.Artist} - {new Date(data.start).getHours() < 10 ? '0'+new Date(data.start).getHours() :new Date(data.start).getHours()}:{new Date(data.start).getMinutes() === 0 ? '00':new Date(data.start).getMinutes()}น.-{data.end}น. -&nbsp;
     <TextArtistSelect
@@ -678,9 +689,47 @@ function Bmmf () {
                     data.stage === 9 && 'อโคจรผับ'}
     </TextArtistSelect>
     </SelectDataArtist>
-    ):
-    dataSelect?.map((data)=>
+    )}       
+    </>
+    <>{
+    dataSelect?.map((data,key)=>
+    new Date(data.start).getDate() === 10 &&
+    new Date(data.start).getHours() < 4 && 
+    <SelectDataArtist>
+    {data.Artist} - {new Date(data.start).getHours() < 10 ? '0'+new Date(data.start).getHours() :new Date(data.start).getHours()}:{new Date(data.start).getMinutes() === 0 ? '00':new Date(data.start).getMinutes()}น.-{data.end}น. -&nbsp;
+    <TextArtistSelect
+    color={
+        data.stage === 1 ?'#0c545c':
+        data.stage === 2 ? '#aa4088':
+        data.stage === 3 ? '#9a031e':
+        data.stage === 4 ?'#5c5cc6':
+        data.stage === 5 ? '#003d5b':
+        data.stage === 6 ? '#fb6d10':
+        data.stage === 7 ? '#f11548':
+        data.stage === 8 ? '#fdbf52':
+        data.stage === 9 && '#138086'
+        }
+    >
+    {
+                    data.stage === 1 ?'MOUNTAIN STAGE':
+                    data.stage === 2 ? 'COW STAGE':
+                    data.stage === 3 ? 'BLOCK STAGE':
+                    data.stage === 4 ?'EGG STAGE':
+                    data.stage === 5 ? 'PEPSI CHIC STAGE':
+                    data.stage === 6 ? 'KRATOM STAGE':
+                    data.stage === 7 ? 'FOR-REST STAGE':
+                    data.stage === 8 ? 'บาร์รำวง':
+                    data.stage === 9 && 'อโคจรผับ'}
+    </TextArtistSelect>
+    </SelectDataArtist>
+    )}</>
+    </>
+    :
+    <>
+    <>
+    {dataSelect?.map((data)=>
     new Date(data.start).getDate() === 11 &&
+    new Date(data.start).getHours() > 4 && 
     <SelectDataArtist>
     {data.Artist} - {new Date(data.start).getHours() < 10 ? '0'+new Date(data.start).getHours() :new Date(data.start).getHours()}:{new Date(data.start).getMinutes() === 0 ? '00':new Date(data.start).getMinutes()}น.-{data.end}น. -&nbsp;
     <TextArtistSelect
@@ -708,7 +757,42 @@ function Bmmf () {
                     data.stage === 9 && 'อโคจรผับ'}
     </TextArtistSelect>
     </SelectDataArtist>
-    )
+    )}
+    </>
+    <>
+    {dataSelect?.map((data)=>
+    new Date(data.start).getDate() === 11 &&
+    new Date(data.start).getHours() < 4 && 
+    <SelectDataArtist>
+    {data.Artist} - {new Date(data.start).getHours() < 10 ? '0'+new Date(data.start).getHours() :new Date(data.start).getHours()}:{new Date(data.start).getMinutes() === 0 ? '00':new Date(data.start).getMinutes()}น.-{data.end}น. -&nbsp;
+    <TextArtistSelect
+    color={
+        data.stage === 1 ?'#0c545c':
+        data.stage === 2 ? '#aa4088':
+        data.stage === 3 ? '#9a031e':
+        data.stage === 4 ?'#5c5cc6':
+        data.stage === 5 ? '#003d5b':
+        data.stage === 6 ? '#fb6d10':
+        data.stage === 7 ? '#f11548':
+        data.stage === 8 ? '#fdbf52':
+        data.stage === 9 && '#138086'
+        }
+    >
+    {
+                    data.stage === 1 ?'MOUNTAIN STAGE':
+                    data.stage === 2 ? 'COW STAGE':
+                    data.stage === 3 ? 'BLOCK STAGE':
+                    data.stage === 4 ?'EGG STAGE':
+                    data.stage === 5 ? 'PEPSI CHIC STAGE':
+                    data.stage === 6 ? 'KRATOM STAGE':
+                    data.stage === 7 ? 'FOR-REST STAGE':
+                    data.stage === 8 ? 'บาร์รำวง':
+                    data.stage === 9 && 'อโคจรผับ'}
+    </TextArtistSelect>
+    </SelectDataArtist>
+    )}
+    </>
+    </>
     }
 
 
