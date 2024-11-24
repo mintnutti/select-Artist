@@ -615,7 +615,7 @@ function Bmmf() {
     },
     {
       id: 30,
-      Artist: "Dat Pramote",
+      Artist: "Oat Pramote",
       start: "2024/12/07 00:30",
       end: "01:15",
       time: 45,
