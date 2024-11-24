@@ -1398,12 +1398,7 @@ function Bmmf() {
     if (status === "delete") {
       setShowModal(false);
       setDataSelect(dataSelect.filter((value) => value.id !== data.id));
-      console.log(
-        "----",
-        dataSelect.filter((value) => value.id !== data.id)
-      );
     } else {
-      console.log("data-------", data);
       dataSelect.push(data);
       setShowModal(false);
     }
