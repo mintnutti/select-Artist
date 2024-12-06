@@ -455,7 +455,7 @@ function Bmmf() {
     },
     {
       id: 10,
-      Artist: "จี๋ นมสด",
+      Artist: "จ๊ะ นงผณี",
       start: "2024/12/07 22:45",
       end: "23:45",
       time: 60,
@@ -559,7 +559,7 @@ function Bmmf() {
     },
     {
       id: 23,
-      Artist: "Jaow Pittaya / Diamond Narakorn",
+      Artist: "Daou Pittaya / Diamond Narakorn",
       start: "2024/12/07 17:30",
       end: "18:15",
       time: 45,
